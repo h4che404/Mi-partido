@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mi Partido - Onboarding Ubicación</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec5b",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                        "surface-dark": "#1c2e21", 
+                        "input-dark": "#16261b",
+                        "border-dark": "#2f4535",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for dark mode feeling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #102216; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2f4535; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b5443; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white h-screen flex overflow-hidden">
+<!-- Sidebar -->
+<aside class="w-72 bg-background-light dark:bg-[#0c1a11] border-r border-gray-200 dark:border-border-dark flex flex-col justify-between shrink-0 transition-all duration-300">
+<div class="flex flex-col h-full">
+<!-- Brand -->
+<div class="p-6 pb-2">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-3xl">sports_soccer</span>
+<h1 class="text-xl font-bold tracking-tight">Mi Partido</h1>
+</div>
+<p class="text-slate-500 dark:text-[#9db9a6] text-sm pl-9">Configuración B2B</p>
+</div>
+<!-- Navigation -->
+<nav class="flex-1 px-4 py-6 flex flex-col gap-2">
+<!-- Completed Step -->
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-slate-600 dark:text-[#9db9a6] hover:bg-gray-100 dark:hover:bg-white/5 transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">info</span>
+<span class="text-sm font-medium">Información General</span>
+<span class="material-symbols-outlined ml-auto text-primary text-sm">check_circle</span>
+</a>
+<!-- Active Step -->
+<div class="flex items-center gap-3 px-3 py-3 rounded-lg bg-gray-200 dark:bg-primary/10 border-l-4 border-primary shadow-sm">
+<span class="material-symbols-outlined text-primary font-variation-fill">location_on</span>
+<p class="text-slate-900 dark:text-white text-sm font-semibold">Ubicación</p>
+</div>
+<!-- Upcoming Steps -->
+<div class="flex items-center gap-3 px-3 py-3 rounded-lg text-slate-400 dark:text-gray-500">
+<span class="material-symbols-outlined">grid_view</span>
+<p class="text-sm font-medium">Canchas</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-3 rounded-lg text-slate-400 dark:text-gray-500">
+<span class="material-symbols-outlined">calendar_month</span>
+<p class="text-sm font-medium">Horarios</p>
+</div>
+</nav>
+<!-- Sidebar Footer -->
+<div class="p-4 border-t border-gray-200 dark:border-border-dark">
+<div class="flex items-center gap-3 px-3 py-2">
+<div class="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-green-800 flex items-center justify-center text-xs font-bold text-black">
+                        CC
+                    </div>
+<div class="flex flex-col">
+<span class="text-sm font-medium text-slate-900 dark:text-white">Club Central</span>
+<span class="text-xs text-slate-500 dark:text-gray-400">admin@clubcentral.com</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col h-full overflow-hidden relative">
+<!-- Top Bar / Progress Header -->
+<header class="h-16 border-b border-gray-200 dark:border-border-dark flex items-center justify-between px-8 bg-background-light dark:bg-background-dark/50 backdrop-blur-md z-10">
+<div class="flex items-center gap-4 w-full max-w-xl">
+<span class="text-sm font-medium text-slate-500 dark:text-[#9db9a6] whitespace-nowrap">Paso 2 de 4</span>
+<div class="h-2 w-full bg-gray-200 dark:bg-[#2f4535] rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500 ease-out" style="width: 50%"></div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 text-slate-500 dark:text-[#9db9a6] hover:text-primary transition-colors text-sm font-medium">
+<span class="material-symbols-outlined text-lg">help</span>
+<span>Ayuda</span>
+</button>
+</div>
+</header>
+<!-- Scrollable Content Area -->
+<div class="flex-1 overflow-y-auto p-6 md:p-8 lg:p-12">
+<div class="max-w-6xl mx-auto flex flex-col gap-8">
+<!-- Page Heading -->
+<div class="flex flex-col gap-2">
+<h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight">Configura la ubicación de tu complejo</h2>
+<p class="text-slate-600 dark:text-[#9db9a6] text-lg max-w-2xl">
+                        Ayuda a tus jugadores a llegar sin problemas. Ingresa la dirección y confirma la posición exacta en el mapa.
+                    </p>
+</div>
+<!-- Grid Layout: Form & Map -->
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-8 items-start">
+<!-- Left Column: Form -->
+<div class="flex flex-col gap-6 bg-white dark:bg-surface-dark p-6 rounded-xl border border-gray-200 dark:border-border-dark shadow-sm">
+<!-- Street Address -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-slate-700 dark:text-gray-300">Calle / Dirección</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 dark:text-gray-500 group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full bg-gray-50 dark:bg-input-dark border border-gray-300 dark:border-border-dark rounded-lg pl-12 pr-4 py-3.5 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-600 focus:ring-1 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="Ej: Av. del Libertador" type="text" value="Av. del Libertador"/>
+</div>
+</div>
+<!-- Number & Floor Row -->
+<div class="flex flex-row gap-4">
+<div class="flex-1 flex flex-col gap-2">
+<label class="text-sm font-medium text-slate-700 dark:text-gray-300">Número</label>
+<input class="w-full bg-gray-50 dark:bg-input-dark border border-gray-300 dark:border-border-dark rounded-lg px-4 py-3.5 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-600 focus:ring-1 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="1234" type="text" value="4500"/>
+</div>
+<div class="flex-1 flex flex-col gap-2">
+<label class="text-sm font-medium text-slate-700 dark:text-gray-300">Piso / Depto <span class="text-slate-400 dark:text-gray-600 font-normal">(Opcional)</span></label>
+<input class="w-full bg-gray-50 dark:bg-input-dark border border-gray-300 dark:border-border-dark rounded-lg px-4 py-3.5 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-600 focus:ring-1 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="Ej: 4B" type="text"/>
+</div>
+</div>
+<!-- City, Province, Zip Row -->
+<div class="grid grid-cols-2 gap-4">
+<div class="col-span-2 md:col-span-1 flex flex-col gap-2">
+<label class="text-sm font-medium text-slate-700 dark:text-gray-300">Ciudad</label>
+<input class="w-full bg-gray-50 dark:bg-input-dark border border-gray-300 dark:border-border-dark rounded-lg px-4 py-3.5 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-600 focus:ring-1 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="Buenos Aires" type="text" value="Buenos Aires"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-slate-700 dark:text-gray-300">Provincia</label>
+<div class="relative">
+<select class="w-full bg-gray-50 dark:bg-input-dark border border-gray-300 dark:border-border-dark rounded-lg px-4 py-3.5 text-slate-900 dark:text-white focus:ring-1 focus:ring-primary focus:border-primary transition-all outline-none appearance-none cursor-pointer">
+<option>CABA</option>
+<option>Buenos Aires</option>
+<option>Córdoba</option>
+<option>Santa Fe</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 dark:text-gray-500 pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-slate-700 dark:text-gray-300">C. Postal</label>
+<input class="w-full bg-gray-50 dark:bg-input-dark border border-gray-300 dark:border-border-dark rounded-lg px-4 py-3.5 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-600 focus:ring-1 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="1425" type="text" value="1425"/>
+</div>
+</div>
+</div>
+<!-- Right Column: Map -->
+<div class="flex flex-col gap-4 h-full min-h-[400px]">
+<div class="flex items-center justify-between">
+<label class="text-sm font-medium text-slate-700 dark:text-gray-300 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">my_location</span>
+                                Confirmar ubicación en mapa
+                            </label>
+<span class="text-xs text-primary bg-primary/10 px-2 py-1 rounded">Arrastra el pin para ajustar</span>
+</div>
+<div class="relative w-full h-full min-h-[400px] bg-slate-800 rounded-xl overflow-hidden border border-gray-200 dark:border-border-dark shadow-inner group">
+<!-- Dark Map Image Placeholder -->
+<img class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay grayscale contrast-125" data-alt="Dark stylized map texture showing city streets and blocks in high contrast" data-location="Buenos Aires" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPcjkoHvTBaKpCPBZpZ03hwbLkPe0TwKCmdpLuvrGTxpeZdgGyvTcnH7sO25slyipO287k2d96z3camnAT0RL8kLmgkC5ulKJlrZnreq6pff5OLLBudOF4kCz-bw-7iZNbp2kD4ZlkpDUMaGtM1M5os74k4t36txG97RgAB2vVPVrYhdTrGt4VcQt6iUZe0fn9Jcy77D9-6GT6400wx1s2gzIPvC91qDwAaNaTDyfEYYcHASQ3VZcQ8_5hd35XYMO_Y835FH_y-W_I"/>
+<!-- Dark Overlay Gradient for better UI visibility -->
+<div class="absolute inset-0 bg-gradient-to-t from-[#102216]/80 via-transparent to-[#102216]/20 pointer-events-none"></div>
+<!-- Map Pin -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-full flex flex-col items-center cursor-grab hover:scale-110 transition-transform z-20">
+<div class="relative">
+<span class="material-symbols-outlined text-5xl text-primary drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] font-variation-fill">location_on</span>
+<div class="absolute bottom-1 left-1/2 -translate-x-1/2 w-2 h-1 bg-black/50 blur-[2px] rounded-full"></div>
+</div>
+<div class="bg-surface-dark/90 backdrop-blur text-white text-xs px-3 py-1 rounded-full border border-primary/30 shadow-lg mt-1 whitespace-nowrap">
+                                    Av. del Libertador 4500
+                                </div>
+</div>
+<!-- Map Controls -->
+<div class="absolute right-4 bottom-4 flex flex-col gap-2 z-20">
+<button class="w-10 h-10 bg-surface-dark border border-border-dark rounded-lg flex items-center justify-center text-white hover:bg-primary hover:text-black hover:border-primary transition-colors shadow-lg">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="w-10 h-10 bg-surface-dark border border-border-dark rounded-lg flex items-center justify-center text-white hover:bg-primary hover:text-black hover:border-primary transition-colors shadow-lg">
+<span class="material-symbols-outlined">remove</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Navigation -->
+<div class="flex items-center justify-between pt-8 mt-auto border-t border-gray-200 dark:border-border-dark">
+<button class="px-6 py-3 rounded-lg border border-gray-300 dark:border-border-dark text-slate-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-surface-dark hover:text-slate-900 dark:hover:text-white transition-all font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">arrow_back</span>
+                        Anterior
+                    </button>
+<button class="px-8 py-3 rounded-lg bg-primary hover:bg-[#0fd450] text-black font-bold shadow-[0_0_20px_rgba(19,236,91,0.3)] hover:shadow-[0_0_30px_rgba(19,236,91,0.5)] transition-all flex items-center gap-2 transform active:scale-95">
+                        Guardar y Continuar
+                        <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+<!-- Bottom Spacer -->
+<div class="h-8"></div>
+</div>
+</div>
+</main>
+</body></html>

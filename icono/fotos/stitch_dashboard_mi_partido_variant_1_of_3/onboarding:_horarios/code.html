@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mi Partido Admin - Horarios Onboarding</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec5b",
+                        "primary-hover": "#0fb845",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1c271f",
+                        "border-light": "#e5e7eb",
+                        "border-dark": "#28392e",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b5443;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4a6652;
+        }input[type="time"]::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+            cursor: pointer;
+        }
+        .light input[type="time"]::-webkit-calendar-picker-indicator {
+            filter: invert(0);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white transition-colors duration-200 min-h-screen flex flex-col">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-border-light dark:border-border-dark bg-surface-light dark:bg-background-dark px-6 py-3 lg:px-10">
+<div class="flex items-center gap-4">
+<div class="size-8 flex items-center justify-center rounded-lg bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-2xl">sports_soccer</span>
+</div>
+<h2 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Mi Partido Admin</h2>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<div class="flex gap-2">
+<button class="group flex size-10 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-[#28392e] transition-colors">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400 group-hover:text-primary transition-colors">settings</span>
+</button>
+<button class="group flex size-10 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-[#28392e] transition-colors">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400 group-hover:text-primary transition-colors">help</span>
+</button>
+</div>
+<div class="h-8 w-[1px] bg-border-light dark:bg-border-dark"></div>
+<div class="flex items-center gap-3">
+<div class="text-right hidden sm:block">
+<p class="text-sm font-bold text-gray-900 dark:text-white">Club Los Pinos</p>
+<p class="text-xs text-gray-500 dark:text-[#9db9a6]">Admin</p>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary" data-alt="User profile picture of a tennis player" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC21mD9-UI-XP0mQD-CmEmItCRjxHqnNPhgWXtNgJvB1CJxkbFUi_LnFjlJeOq-SrA-0YtC7Bh0Fa4mrykdKB_MjPkA_MPTwmqR4lycwip9-mptoGjGAoav3Ythht3CDCyMv3jj4lbDKnSqxQeP9eBnMFnwwnbhBIuu2GbvUeo4j6jVoqnxaKjr5xO5P-A3dIe38tH15153haz-qNH4zFhwh-_bQLULF6ha3AoTy0xkFbpAUVifK6oAvex8ZigHARazeV7FmZAdvN-9");'>
+</div>
+</div>
+</div>
+</header>
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center py-8 px-4 sm:px-6 lg:px-8">
+<div class="layout-content-container flex flex-col max-w-[1140px] flex-1 w-full gap-6">
+<div class="flex flex-col gap-3">
+<div class="flex gap-6 justify-between items-end">
+<div class="flex flex-col gap-1">
+<span class="text-primary text-xs font-bold uppercase tracking-wider">Configuración Inicial</span>
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal">Paso 3 de 7: Horarios</p>
+</div>
+<p class="text-gray-500 dark:text-[#9db9a6] text-sm font-medium">42% completado</p>
+</div>
+<div class="rounded-full bg-gray-200 dark:bg-[#28392e] h-2 w-full overflow-hidden">
+<div class="h-full rounded-full bg-primary transition-all duration-500 ease-out" style="width: 42%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<h1 class="text-gray-900 dark:text-white tracking-tight text-3xl md:text-4xl font-bold">Configura tus Horarios Generales</h1>
+<p class="text-gray-600 dark:text-[#9db9a6] text-base md:text-lg max-w-2xl">
+                        Define el rango de operación. Activa el "Horario Dividido" si el complejo cierra durante el mediodía (siesta).
+                    </p>
+</div>
+<div class="flex flex-col rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark shadow-sm overflow-hidden">
+<div class="hidden md:grid grid-cols-12 gap-4 px-6 py-4 bg-gray-50 dark:bg-[#151f18] border-b border-border-light dark:border-border-dark text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-[#9db9a6]">
+<div class="col-span-2">Día</div>
+<div class="col-span-1 text-center">Estado</div>
+<div class="col-span-2 text-center">Horario Dividido</div>
+<div class="col-span-5">Horarios de Apertura y Cierre</div>
+<div class="col-span-2 text-right">Acciones</div>
+</div>
+<div class="divide-y divide-border-light dark:divide-border-dark">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-y-4 md:gap-4 px-6 py-4 items-center group hover:bg-gray-50 dark:hover:bg-[#233026] transition-colors">
+<div class="col-span-12 md:col-span-2 flex justify-between md:block items-center">
+<span class="font-medium text-gray-900 dark:text-white">Lunes</span>
+<div class="md:hidden">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<div class="col-span-12 md:hidden flex items-center justify-between py-1">
+<span class="text-sm text-gray-500 dark:text-gray-400">¿Cerrar al mediodía?</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="hidden md:flex col-span-1 justify-center">
+<label class="relative inline-flex items-center cursor-pointer" title="Abierto/Cerrado">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer dark:bg-[#28392e] peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="hidden md:flex col-span-2 justify-center">
+<label class="relative inline-flex items-center cursor-pointer" title="Activar horario dividido (Siesta)">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-[#28392e] peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="col-span-12 md:col-span-5 flex flex-col md:flex-row gap-4 md:items-center">
+<div class="flex gap-2 items-center flex-1">
+<div class="relative w-full">
+<input aria-label="Hora de apertura" class="bg-white dark:bg-[#111813] border border-gray-300 dark:border-[#3b5443] text-gray-900 dark:text-white text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5" type="time" value="08:00"/>
+</div>
+<span class="text-gray-400 font-medium">-</span>
+<div class="relative w-full">
+<input aria-label="Hora de cierre" class="bg-white dark:bg-[#111813] border border-gray-300 dark:border-[#3b5443] text-gray-900 dark:text-white text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5" type="time" value="23:00"/>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-2 flex md:justify-end">
+<button class="flex items-center gap-2 text-xs font-bold text-primary hover:text-primary-hover transition-colors px-3 py-2 rounded bg-primary/10 hover:bg-primary/20 w-full md:w-auto justify-center md:justify-start">
+<span class="material-symbols-outlined text-lg">content_copy</span>
+                                    Copiar a todos
+                                </button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-y-4 md:gap-4 px-6 py-4 items-center group hover:bg-gray-50 dark:hover:bg-[#233026] transition-colors bg-primary/5 dark:bg-primary/5">
+<div class="col-span-12 md:col-span-2 flex justify-between md:block items-center">
+<span class="font-medium text-gray-900 dark:text-white">Martes</span>
+<div class="md:hidden">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<div class="col-span-12 md:hidden flex items-center justify-between py-1">
+<span class="text-sm text-gray-900 font-medium dark:text-white">Cerrar al mediodía</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="hidden md:flex col-span-1 justify-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer dark:bg-[#28392e] peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="hidden md:flex col-span-2 justify-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-[#28392e] peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="col-span-12 md:col-span-5 grid grid-cols-1 md:grid-cols-1 gap-3">
+<div class="flex gap-2 items-center">
+<div class="relative w-full">
+<label class="block md:hidden text-xs text-gray-500 mb-1">Apertura Mañana</label>
+<input class="bg-white dark:bg-[#111813] border border-gray-300 dark:border-[#3b5443] text-gray-900 dark:text-white text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5" type="time" value="08:00"/>
+</div>
+<span class="text-gray-400 font-medium md:pt-0 pt-5">-</span>
+<div class="relative w-full">
+<label class="block md:hidden text-xs text-gray-500 mb-1">Cierre Mañana</label>
+<input class="bg-white dark:bg-[#111813] border border-gray-300 dark:border-[#3b5443] text-gray-900 dark:text-white text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5" type="time" value="13:00"/>
+</div>
+</div>
+<div class="flex gap-2 items-center">
+<div class="relative w-full">
+<label class="block md:hidden text-xs text-gray-500 mb-1">Reapertura Tarde</label>
+<input class="bg-white dark:bg-[#111813] border border-gray-300 dark:border-[#3b5443] text-gray-900 dark:text-white text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5" type="time" value="16:00"/>
+</div>
+<span class="text-gray-400 font-medium md:pt-0 pt-5">-</span>
+<div class="relative w-full">
+<label class="block md:hidden text-xs text-gray-500 mb-1">Cierre Tarde</label>
+<input class="bg-white dark:bg-[#111813] border border-gray-300 dark:border-[#3b5443] text-gray-900 dark:text-white text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5" type="time" value="23:00"/>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-2 flex md:justify-end">
+<button class="text-gray-400 hover:text-white transition-colors p-2 rounded hover:bg-white/10" title="Copiar al siguiente día">
+<span class="material-symbols-outlined">content_copy</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-y-4 md:gap-4 px-6 py-4 items-center group hover:bg-gray-50 dark:hover:bg-[#233026] transition-colors">
+<div class="col-span-12 md:col-span-2 flex justify-between md:block items-center">
+<span class="font-medium text-gray-900 dark:text-white">Miércoles</span>
+<div class="md:hidden">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<div class="col-span-12 md:hidden flex items-center justify-between py-1">
+<span class="text-sm text-gray-500 dark:text-gray-400">¿Cerrar al mediodía?</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="hidden md:flex col-span-1 justify-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer dark:bg-[#28392e] peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="hidden md:flex col-span-2 justify-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-[#28392e] peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="col-span-12 md:col-span-5 flex flex-col md:flex-row gap-4 md:items-center">
+<div class="flex gap-2 items-center flex-1">
+<div class="relative w-full">
+<input class="bg-white dark:bg-[#111813] border border-gray-300 dark:border-[#3b5443] text-gray-900 dark:text-white text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5" type="time" value="08:00"/>
+</div>
+<span class="text-gray-400 font-medium">-</span>
+<div class="relative w-full">
+<input class="bg-white dark:bg-[#111813] border border-gray-300 dark:border-[#3b5443] text-gray-900 dark:text-white text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5" type="time" value="23:00"/>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-2 flex md:justify-end">
+<button class="text-gray-400 hover:text-white transition-colors p-2 rounded hover:bg-white/10" title="Copiar al siguiente día">
+<span class="material-symbols-outlined">content_copy</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-y-4 md:gap-4 px-6 py-4 items-center group hover:bg-gray-50 dark:hover:bg-[#233026] transition-colors">
+<div class="col-span-12 md:col-span-2 flex justify-between md:block items-center">
+<span class="font-medium text-gray-900 dark:text-white">Jueves</span>
+<div class="md:hidden">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<div class="col-span-12 md:hidden flex items-center justify-between py-1">
+<span class="text-sm text-gray-500 dark:text-gray-400">¿Cerrar al mediodía?</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="hidden md:flex col-span-1 justify-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer dark:bg-[#28392e] peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="hidden md:flex col-span-2 justify-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-[#28392e] peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="col-span-12 md:col-span-5 flex flex-col md:flex-row gap-4 md:items-center">
+<div class="flex gap-2 items-center flex-1">
+<div class="relative w-full">
+<input class="bg-white dark:bg-[#111813] border border-gray-300 dark:border-[#3b5443] text-gray-900 dark:text-white text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5" type="time" value="08:00"/>
+</div>
+<span class="text-gray-400 font-medium">-</span>
+<div class="relative w-full">
+<input class="bg-white dark:bg-[#111813] border border-gray-300 dark:border-[#3b5443] text-gray-900 dark:text-white text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5" type="time" value="23:00"/>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-2 flex md:justify-end">
+<button class="text-gray-400 hover:text-white transition-colors p-2 rounded hover:bg-white/10" title="Copiar al siguiente día">
+<span class="material-symbols-outlined">content_copy</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-y-4 md:gap-4 px-6 py-4 items-center group hover:bg-gray-50 dark:hover:bg-[#233026] transition-colors">
+<div class="col-span-12 md:col-span-2 flex justify-between md:block items-center">
+<span class="font-medium text-gray-900 dark:text-white">Viernes</span>
+<div class="md:hidden">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<div class="col-span-12 md:hidden flex items-center justify-between py-1">
+<span class="text-sm text-gray-500 dark:text-gray-400">¿Cerrar al mediodía?</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="hidden md:flex col-span-1 justify-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer dark:bg-[#28392e] peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="hidden md:flex col-span-2 justify-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-[#28392e] peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="col-span-12 md:col-span-5 flex flex-col md:flex-row gap-4 md:items-center">
+<div class="flex gap-2 items-center flex-1">
+<div class="relative w-full">
+<input class="bg-white dark:bg-[#111813] border border-gray-300 dark:border-[#3b5443] text-gray-900 dark:text-white text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5" type="time" value="08:00"/>
+</div>
+<span class="text-gray-400 font-medium">-</span>
+<div class="relative w-full">
+<input class="bg-white dark:bg-[#111813] border border-gray-300 dark:border-[#3b5443] text-gray-900 dark:text-white text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5" type="time" value="01:00"/>
+<span class="absolute right-3 top-2.5 text-xs text-primary font-medium pointer-events-none bg-background-dark/80 px-1 rounded backdrop-blur-sm">+1 día</span>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-2 flex md:justify-end">
+<button class="text-gray-400 hover:text-white transition-colors p-2 rounded hover:bg-white/10" title="Copiar al siguiente día">
+<span class="material-symbols-outlined">content_copy</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-y-4 md:gap-4 px-6 py-4 items-center group hover:bg-gray-50 dark:hover:bg-[#233026] transition-colors">
+<div class="col-span-12 md:col-span-2 flex justify-between md:block items-center">
+<span class="font-medium text-gray-900 dark:text-white">Sábado</span>
+<div class="md:hidden">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<div class="col-span-12 md:hidden flex items-center justify-between py-1">
+<span class="text-sm text-gray-500 dark:text-gray-400">¿Cerrar al mediodía?</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="hidden md:flex col-span-1 justify-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer dark:bg-[#28392e] peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="hidden md:flex col-span-2 justify-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-[#28392e] peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="col-span-12 md:col-span-5 flex flex-col md:flex-row gap-4 md:items-center">
+<div class="flex gap-2 items-center flex-1">
+<div class="relative w-full">
+<input class="bg-white dark:bg-[#111813] border border-gray-300 dark:border-[#3b5443] text-gray-900 dark:text-white text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5" type="time" value="09:00"/>
+</div>
+<span class="text-gray-400 font-medium">-</span>
+<div class="relative w-full">
+<input class="bg-white dark:bg-[#111813] border border-gray-300 dark:border-[#3b5443] text-gray-900 dark:text-white text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5" type="time" value="02:00"/>
+<span class="absolute right-3 top-2.5 text-xs text-primary font-medium pointer-events-none bg-background-dark/80 px-1 rounded backdrop-blur-sm">+1 día</span>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-2 flex md:justify-end">
+<button class="text-gray-400 hover:text-white transition-colors p-2 rounded hover:bg-white/10" title="Copiar al siguiente día">
+<span class="material-symbols-outlined">content_copy</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-y-4 md:gap-4 px-6 py-4 items-center group bg-gray-50/50 dark:bg-[#151f18]/50 hover:bg-gray-50 dark:hover:bg-[#233026] transition-colors opacity-75">
+<div class="col-span-12 md:col-span-2 flex justify-between md:block items-center">
+<span class="font-medium text-gray-500 dark:text-gray-400">Domingo</span>
+<div class="md:hidden">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<div class="col-span-12 md:hidden flex items-center justify-between py-1 opacity-50 pointer-events-none">
+<span class="text-sm text-gray-400 dark:text-gray-600">¿Cerrar al mediodía?</span>
+<div class="w-9 h-5 bg-gray-100 dark:bg-gray-800 rounded-full"></div>
+</div>
+<div class="hidden md:flex col-span-1 justify-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer dark:bg-[#28392e] peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+<span class="ml-3 text-sm font-medium text-gray-500 dark:text-gray-400 hidden">Cerrado</span>
+</label>
+</div>
+<div class="hidden md:flex col-span-2 justify-center opacity-50 pointer-events-none">
+<div class="w-9 h-5 bg-gray-200 dark:bg-[#28392e] rounded-full"></div>
+</div>
+<div class="col-span-12 md:col-span-5 flex flex-col md:flex-row gap-4 md:items-center">
+<div class="flex gap-2 items-center flex-1">
+<div class="relative w-full">
+<input class="bg-gray-100 dark:bg-[#0c120e] border border-transparent text-gray-400 dark:text-gray-500 text-sm rounded-lg block w-full p-2.5 cursor-not-allowed" disabled="" type="text" value="Cerrado"/>
+</div>
+<div class="relative w-full">
+<input class="bg-gray-100 dark:bg-[#0c120e] border border-transparent text-gray-400 dark:text-gray-500 text-sm rounded-lg block w-full p-2.5 cursor-not-allowed" disabled="" type="text" value="Cerrado"/>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-2 flex md:justify-end">
+<div class="w-8"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col-reverse sm:flex-row justify-between gap-4 py-6 border-t border-border-light dark:border-border-dark mt-4">
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 border border-border-light dark:border-border-dark hover:bg-gray-100 dark:hover:bg-[#28392e] text-gray-900 dark:text-white text-base font-bold transition-all">
+                        Anterior
+                    </button>
+<div class="flex flex-col sm:flex-row gap-4 items-center">
+<p class="text-sm text-gray-500 dark:text-[#9db9a6] order-2 sm:order-1">Total: <span class="font-bold text-gray-900 dark:text-white">88 horas</span> semanales</p>
+<button class="flex min-w-[160px] w-full sm:w-auto order-1 sm:order-2 cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-primary-hover text-[#111813] text-base font-bold shadow-lg shadow-primary/20 transition-all">
+                            Siguiente
+                            <span class="material-symbols-outlined ml-2 text-xl">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>
